@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <fImage/>
+    <fForm/>
+    <fFooter/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import fForm from './components/f-form.vue';
+import fImage from './components/f-image.vue';
+import fFooter from "./components/f-footer.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    fForm,
+    fImage,
+    fFooter
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+  .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 20px solid #999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+
+</style>
+
+<style>
+  body {
+    font-family: "Roboto", sans-serif;
+  }
 </style>
